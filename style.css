@@ -68,7 +68,7 @@ body, html {
 }
 
 .badge.purple::after {
-  content: "Staff";
+  content: "SAGE";
   position: absolute;
   bottom: -22px;
   left: 50%;
