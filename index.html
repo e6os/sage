@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sage | @qbvi</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://previews.dropbox.com/p/thumb/ACreCm4gdrfylbXcS9XKF8CwAodXy3YcnSn3YyHc8DOXbBbWRZeCdu3z-UDjtw8j0vSeKkW8okZ8YJCozX3s6q-d6pog0xu3O_ybFnadRnrjTaL8snP8p9ocAruPF_n3SMqfsWKevoa5J6X1sUOBOqYG4Bvhv5DL4MSWWElZYaj1-IA6BWv8CqnkvbF-PYivLZcp4aLbMFxBv_-XZ91Ji86PClFWIfNaW0BJr-2KC984ttvP-_oY4IAwHm70TM8FCG1QwivtO9d-nxt_XbEYBmUYB9LmXQA67j0TJLGDEPX7QktqWgYVa4v-n6KgHqgV9ps/p.png" type="image/x-icon" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    #intro-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      cursor: pointer;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    #intro-screen:hover {
+      text-shadow: 0 0 10px white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background music -->
+  <audio id="bg-music" autoplay loop hidden>
+    <source src="https://files.catbox.moe/90wyxg.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Intro screen -->
+  <div id="intro-screen" onclick="enterSite()">
+    <3
+  </div>
+
+  <!-- Profile content -->
+  <div class="container" id="main-content" style="display: none;">
+    <div class="profile">
+      <img src="https://files.catbox.moe/z8073k.jpg" alt="avatar" class="avatar" />
+      <h1 class="username">sage</h1>
+      <div class="badges">
+        <span class="badge purple"><i class="fas fa-hammer"></i></span>
+        <span class="badge green"><i class="fas fa-cross"></i></span>
+      </div>
+      <p class="subtitle">dih</p>
+      <div class="links">
+        <a href="https://discord.gg/slang" class="icon"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/qbvi" class="icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.roblox.com/users/56280937/profile" class="icon"><i class="fas fa-cube"></i></a>
+      </div>
+      <div class="views"></div>
+    </div>
+  </div>
+
+  <script>
+    function enterSite() {
+      const intro = document.getElementById('intro-screen');
+      const main = document.getElementById('main-content');
+      const music = document.getElementById('bg-music');
+
+      intro.style.opacity = '0';
+      setTimeout(() => {
+        intro.style.display = 'none';
+        main.style.display = 'block';
+      }, 500);
+
+      music.volume = 0.3; // Lower volume
+      music.play().catch(() => {});
+    }
+  </script>
+</body>
+</html>
