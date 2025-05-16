@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>sage | @qbvi</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="https://previews.dropbox.com/p/thumb/ACreCm4gdrfylbXcS9XKF8CwAodXy3YcnSn3YyHc8DOXbBbWRZeCdu3z-UDjtw8j0vSeKkW8okZ8YJCozX3s6q-d6pog0xu3O_ybFnadRnrjTaL8snP8p9ocAruPF_n3SMqfsWKevoa5J6X1sUOBOqYG4Bvhv5DL4MSWWElZYaj1-IA6BWv8CqnkvbF-PYivLZcp4aLbMFxBv_-XZ91Ji86PClFWIfNaW0BJr-2KC984ttvP-_oY4IAwHm70TM8FCG1QwivtO9d-nxt_XbEYBmUYB9LmXQA67j0TJLGDEPX7QktqWgYVa4v-n6KgHqgV9ps/p.png" type="image/x-icon" />
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -36,18 +34,15 @@
   </style>
 </head>
 <body>
-  <!-- Background music -->
   <audio id="bg-music" autoplay loop hidden>
     <source src="https://files.catbox.moe/90wyxg.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Intro screen -->
   <div id="intro-screen" onclick="enterSite()">
     <3
   </div>
 
-  <!-- Profile content -->
   <div class="container" id="main-content" style="display: none;">
     <div class="profile">
       <img src="https://files.catbox.moe/z8073k.jpg" alt="avatar" class="avatar" />
@@ -78,7 +73,7 @@
         main.style.display = 'block';
       }, 500);
 
-      music.volume = 0.3; // Lower volume
+      music.volume = 0.3; 
       music.play().catch(() => {});
     }
   </script>
