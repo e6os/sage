@@ -3,79 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sage | @qbvi</title>
-
-  <link rel="icon" href="https://previews.dropbox.com/p/thumb/ACreCm4gdrfylbXcS9XKF8CwAodXy3YcnSn3YyHc8DOXbBbWRZeCdu3z-UDjtw8j0vSeKkW8okZ8YJCozX3s6q-d6pog0xu3O_ybFnadRnrjTaL8snP8p9ocAruPF_n3SMqfsWKevoa5J6X1sUOBOqYG4Bvhv5DL4MSWWElZYaj1-IA6BWv8CqnkvbF-PYivLZcp4aLbMFxBv_-XZ91Ji86PClFWIfNaW0BJr-2KC984ttvP-_oY4IAwHm70TM8FCG1QwivtO9d-nxt_XbEYBmUYB9LmXQA67j0TJLGDEPX7QktqWgYVa4v-n6KgHqgV9ps/p.png" type="image/x-icon" />
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <title>Seized Site</title>
   <style>
-    #intro-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
+    body {
+      background-color: #000;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      cursor: pointer;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
 
-    #intro-screen:hover {
-      text-shadow: 0 0 10px white;
+    .seal-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .seal-container img {
+      width: 120px;
+      margin: 20px;
+    }
+
+    h1 {
+      color: red;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    .banner {
+      background-color: red;
+      color: white;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <audio id="bg-music" autoplay loop hidden>
-    <source src="https://files.catbox.moe/r2ekpx.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
+  <div class="banner">⚠️ THIS DOMAIN HAS BEEN SEIZED ⚠️</div>
 
-  <div id="intro-screen" onclick="enterSite()">
-    <3
+  <div class="seal-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Seal_of_the_United_States_Department_of_Justice.svg/200px-Seal_of_the_United_States_Department_of_Justice.svg.png" alt="DoJ Seal" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/US-FBI-ShadedSeal.svg/200px-US-FBI-ShadedSeal.svg.png" alt="FBI Seal" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Europol_logo.svg/200px-Europol_logo.svg.png" alt="Europol Logo" />
   </div>
 
-  <div class="container" id="main-content" style="display: none;">
-    <div class="profile">
-      <img src="https://files.catbox.moe/z8073k.jpg" alt="avatar" class="avatar" />
-      <h1 class="username">sage</h1>
-      <div class="badges">
-        <span class="badge purple"><i class="fas fa-crown"></i></span>
-        <span class="badge green"><i class="fas fa-cross"></i></span>
-      </div>
-      <p class="subtitle">dih</p>
-      <div class="links">
-        <a href="https://discord.gg/slang" class="icon"><i class="fab fa-discord"></i></a>
-        <a href="https://github.com/qbvi" class="icon"><i class="fab fa-github"></i></a>
-        <a href="https://www.roblox.com/users/56280937/profile" class="icon"><i class="fas fa-cube"></i></a>
-      </div>
-      <div class="views"></div>
-    </div>
+  <h1>This domain has been seized</h1>
+
+  <p>
+    As part of a coordinated international law enforcement action known as <strong>Operation Endgame</strong>, this domain has been seized by authorities from the United States Department of Justice, Federal Bureau of Investigation, and Europol in accordance with a seizure warrant issued by a United States District Court.
+  </p>
+
+  <p>
+    This action was taken against criminal infrastructure involved in the distribution of malware and operation of botnets such as <em>IcedID, Trickbot, SystemBC, Bumblebee, and others</em>.
+  </p>
+
+  <p>
+    If you believe you have been affected or have information relevant to this case, please contact your local cybercrime unit or visit <a href="https://www.europol.europa.eu/" style="color: #4af;">Europol</a> or <a href="https://www.fbi.gov/" style="color: #4af;">FBI.gov</a> for more details.
+  </p>
+
+  <div class="footer">
+    &copy; 2024 United States Department of Justice &middot; Europol &middot; FBI
   </div>
-
-  <script>
-    function enterSite() {
-      const intro = document.getElementById('intro-screen');
-      const main = document.getElementById('main-content');
-      const music = document.getElementById('bg-music');
-
-      intro.style.opacity = '0';
-      setTimeout(() => {
-        intro.style.display = 'none';
-        main.style.display = 'block';
-      }, 500);
-
-      music.volume = 0.3; 
-      music.play().catch(() => {});
-    }
-  </script>
 </body>
 </html>
